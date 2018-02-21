@@ -1,6 +1,6 @@
 # usb_relay_controller
 
-ROS Wrapper for generic USB relay board
+ROS Wrapper for generic USB relay board. Currently WIP.
 
 ## Example usage
 
