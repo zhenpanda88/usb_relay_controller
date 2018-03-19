@@ -3,8 +3,8 @@
 #include <std_msgs/Int16.h>
 #include <std_msgs/String.h>
 #include <libusb-1.0/libusb.h>
-#include <usb_relay_controller/usb_relay_device.h>
-#include <usb_relay_controller/usb_relay_lib.h>
+#include <usb_relay_device.h>
+#include <usb_relay_lib.h>
 
 std_msgs::Int16 state;
 std_msgs::String relayId;
