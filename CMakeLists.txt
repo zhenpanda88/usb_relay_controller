@@ -3,19 +3,6 @@ project(usb_relay_controller)
 
 find_package(catkin_simple REQUIRED roscpp std_msgs)
 
-#uncomment next line to use OpenCV library
-#find_package(OpenCV REQUIRED)
-
-#uncomment the next 2 lines to use the point-cloud library
-#find_package(PCL 1.7 REQUIRED)
-#include_directories(${PCL_INCLUDE_DIRS})
-
-
-#uncomment the following 4 lines to use the Eigen library
-#find_package(cmake_modules REQUIRED)
-#find_package(Eigen3 REQUIRED)
-#include_directories(${EIGEN3_INCLUDE_DIR})
-#add_definitions(${EIGEN_DEFINITIONS})
 
 catkin_simple()
 
@@ -37,7 +24,8 @@ cs_add_executable(usb_relay_publisher src/usb_relay_publisher.cpp)
 
 #the following is required, if desire to link a node in this package with a library created in this same package
 # edit the arguments to reference the named node and named library within this package
-# target_link_library(example my_lib)
+target_link_libraries(usb_relay_controller usb_relay_device)
+target_link_libraries(usb_relay_controller usb_relay_lib)
 
 cs_install()
 cs_export()

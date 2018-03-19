@@ -1,6 +1,6 @@
 #include <ros/ros.h>
 #include <stdlib.h>
-#include <std_msgs/Int16.h>
+#include <std_msgs/Bool.h>
 #include <std_msgs/String.h>
 //#include <libusb-1.0/libusb.h>
 //#include <usb_relay_device.h>
@@ -12,10 +12,10 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "usb_relay_publisher");
 	ros::NodeHandle n;
 
-	ros::Publisher relay_on_off = n.advertise<std_msgs::Int16>("On_Off_State", 1);
-	ros::Publisher relay_device_id = n.advertise<std_msgs::String>("Relay_ID", 1);
+	ros::Publisher relay_on_off = n.advertise<std_msgs::Bool>("USB_On_Off_State", 1);
+	ros::Publisher relay_device_id = n.advertise<std_msgs::String>("USB_Relay_ID", 1);
 
-	std_msgs::Int16 OnOff;
+	std_msgs::Bool OnOff;
 	int state;
 	std_msgs::String id;
 
