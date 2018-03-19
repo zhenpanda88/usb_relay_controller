@@ -6,8 +6,8 @@ ROS Wrapper for generic USB relay board. Currently WIP.
 Plug in the usb device to your computer.
 
 Type in the following in the terminal:
-'rosrun usb_relay_controller usb_relay_controller'
-'rosrun usb_relay_controller usb_relay_publisher'
+`rosrun usb_relay_controller usb_relay_controller`
+`rosrun usb_relay_controller usb_relay_publisher`
 
 Follow the directions the appear in the terminal to turn the relay(s) on and off.
 
